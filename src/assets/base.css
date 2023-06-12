@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;600&family=Shadows+Into+Light&display=swap');
+
+body {
+  min-height: 100vh;
+  color: #fdceaa;
+  background: linear-gradient(0deg, rgba(42, 54, 59, 1) 15%, rgba(232, 74, 95, 1) 100%);
+  line-height: 1.6;
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 500;
+  font-size: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
