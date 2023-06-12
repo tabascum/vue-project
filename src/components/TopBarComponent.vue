@@ -27,4 +27,8 @@ let linkedInLink = 'https://www.linkedin.com/in/vascodmarques/'
 .top-bar a {
   color: #fdceaa;
 }
+
+.top-bar a:hover {
+  color: #27363b;
+}
 </style>
