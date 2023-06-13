@@ -14,7 +14,8 @@
     "motion": "^10.16.2",
     "typed.js": "^2.0.16",
     "vue": "^3.3.2",
-    "vue-router": "^4.2.0"
+    "vue-router": "^4.2.0",
+    "vue-typewriter": "^2.2.1"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",

@@ -2,20 +2,23 @@
 
 <template>
   <section class="home">
-    <figure>
-      <img src="../assets/img/programmer-man.png" alt="" />
-    </figure>
-    <article>
-      <h1>Vasco Marques</h1>
-      <h2>Frontend Developer</h2>
-      <p>Welcome to my world!</p>
-    </article>
+    <div>
+      <figure>
+        <img src="../assets/img/programmer-man.png" alt="" />
+      </figure>
+      <article>
+        <h1>Vasco Marques</h1>
+        <h2 id="position">FRONT END DEVELOPER</h2>
+        <p>Welcome to my world!</p>
+      </article>
+      <article></article>
+    </div>
   </section>
 </template>
 
 <style scoped>
 @media (min-width: 1024px) {
-  .home {
+  .home div {
     padding-inline: 1rem;
     display: flex;
     justify-content: space-around;
@@ -31,14 +34,27 @@
   }
 
   .home figure {
+    margin: 0;
     filter: drop-shadow(1rem 0.5rem 0.3rem #27363b);
   }
 
+  .home figure img {
+    width: 60%;
+  }
+
   .home article {
-    font-family: 'Bodoni Moda', serif;
     display: inherit;
     flex-direction: column;
     line-height: 0;
+    align-items: end;
+  }
+
+  h1 {
+    font-family: 'Bodoni Moda', serif;
+  }
+
+  h2 {
+    color: #99b998;
   }
 }
 </style>

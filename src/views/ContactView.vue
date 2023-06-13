@@ -1,7 +1,11 @@
 <script setup></script>
 
 <template>
-  <section class="contact">Texto</section>
+  <section class="contact">
+    <div>
+      <form action="#"></form>
+    </div>
+  </section>
 </template>
 
 <style scoped>

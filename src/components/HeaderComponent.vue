@@ -46,6 +46,7 @@ header {
   font-family: 'Bodoni Moda', serif;
   font-weight: 500;
   font-size: 2.5rem;
+  border-inline-end: 0.2rem solid #99b898;
 }
 
 .link {
