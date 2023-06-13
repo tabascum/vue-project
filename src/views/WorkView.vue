@@ -1,12 +1,14 @@
 <script setup></script>
 
 <template>
-  <section class="contact">Texto</section>
+  <section class="work">
+    <h1>Projects</h1>
+  </section>
 </template>
 
-<style scoped>
+<style>
 @media (min-width: 1024px) {
-  .contact {
+  .work {
     min-height: 100vh;
     display: flex;
   }

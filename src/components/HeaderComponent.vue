@@ -9,7 +9,7 @@ import { RouterLink } from 'vue-router'
         <h1>VM.</h1>
         <div class="links-wrapper">
           <RouterLink class="link" to="/">HOME</RouterLink>
-          <RouterLink class="link" to="/about">WORK</RouterLink>
+          <RouterLink class="link" to="/work">WORK</RouterLink>
           <RouterLink class="link" to="/contact">CONTACT</RouterLink>
           <!--           <span>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
@@ -24,8 +24,9 @@ import { RouterLink } from 'vue-router'
 
 <style scoped>
 header {
-  border-radius: 0.8rem;
+  font-family: 'Bodoni Moda', serif;
   background: #2a363b;
+  border-radius: 3rem 0 3rem;
   box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
 }
 
@@ -38,7 +39,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0.8rem;
+  gap: 1rem;
 }
 
 .wrapper nav h1 {
@@ -62,7 +63,7 @@ header {
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 2px;
+  height: 0.2rem;
   bottom: 0;
   left: 0;
   background-color: #99b898;

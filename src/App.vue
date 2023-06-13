@@ -1,8 +1,8 @@
 <script setup>
 import { RouterView } from 'vue-router'
+import TopBarComponent from './components/TopBarComponent.vue'
 import HeaderComponent from './components/HeaderComponent.vue'
 import FooterComponent from './components/FooterComponent.vue'
-import TopBarComponent from './components/TopBarComponent.vue'
 </script>
 
 <template>
@@ -10,8 +10,14 @@ import TopBarComponent from './components/TopBarComponent.vue'
   <main class="main">
     <HeaderComponent class="header" />
     <RouterView />
-    <FooterComponent />
   </main>
+  <FooterComponent />
 </template>
 
-<style scoped></style>
+<style scoped>
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+</style>
