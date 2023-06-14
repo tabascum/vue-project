@@ -41,11 +41,11 @@ typeEffect()
     line-height: 0;
     min-height: 80vh;
   }
-}
 
-.home article:nth-child(n) {
-  font-size: 2.5rem;
-  text-shadow: 0.2rem 0.2rem 0.2rem #27363b;
+  .home article:nth-child(n) {
+    font-size: 2.5rem;
+    text-shadow: 0.2rem 0.2rem 0.2rem #27363b;
+  }
 }
 
 .home article {
