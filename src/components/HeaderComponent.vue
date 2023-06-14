@@ -56,6 +56,16 @@ header {
   font-size: 2.5rem;
   border-inline-end: 0.2rem solid #99b898;
   padding-inline-end: 0.5rem;
+  animation: blink 0.5s ease infinite alternate;
+}
+
+@keyframes blink {
+  0% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #99b898;
+  }
 }
 
 .links-wrapper {

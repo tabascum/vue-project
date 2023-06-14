@@ -31,6 +31,9 @@
   .contact {
     min-height: 100vh;
     display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-inline-end: 3rem;
   }
 }
 
@@ -38,6 +41,13 @@ form,
 div {
   display: flex;
   flex-direction: column;
+}
+
+form {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem 0;
+  background: linear-gradient(40deg, #f4837d 10%, #eb4960 100%);
 }
 
 [input],
