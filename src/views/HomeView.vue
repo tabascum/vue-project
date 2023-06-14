@@ -1,4 +1,16 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+const code = '< FRONT END DEVELOPER />'
+const typeValue = ref('')
+
+const typeEffect = () => {
+  if (typeValue.value.length < code.length) {
+    typeValue.value += code.charAt(typeValue.value.length)
+    setTimeout(typeEffect, 100)
+  }
+}
+typeEffect()
+</script>
 
 <template>
   <section class="home">
@@ -8,7 +20,9 @@
       </figure>
       <article>
         <h1>Vasco Marques</h1>
-        <h2 id="position">FRONT END DEVELOPER</h2>
+        <span>
+          <h2 class="typingEffect">{{ typeValue }}</h2>
+        </span>
         <p>Welcome to my world!</p>
       </article>
       <article></article>
@@ -33,28 +47,45 @@
     text-shadow: 0.2rem 0.2rem 0.2rem #27363b;
   }
 
-  .home figure {
-    margin: 0;
-    filter: drop-shadow(1rem 0.5rem 0.3rem #27363b);
-  }
-
-  .home figure img {
-    width: 60%;
-  }
-
   .home article {
+    max-width: 50rem;
     display: inherit;
     flex-direction: column;
     line-height: 0;
-    align-items: end;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+}
+
+.home figure {
+  margin: 0;
+  filter: drop-shadow(1rem 0.5rem 0.3rem #27363b);
+}
+
+.home figure img {
+  width: 70%;
+}
+
+h1 {
+  font-family: 'Bodoni Moda', serif;
+}
+
+h2 {
+  font-size: 1.2em;
+  color: #99b998;
+}
+
+@media (max-width: 1024px) {
+  .home {
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
-  h1 {
-    font-family: 'Bodoni Moda', serif;
-  }
-
-  h2 {
-    color: #99b998;
+  .home figure {
+    padding-block: 1rem;
   }
 }
 </style>

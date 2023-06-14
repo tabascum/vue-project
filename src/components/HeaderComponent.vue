@@ -7,16 +7,23 @@ import { RouterLink } from 'vue-router'
     <div class="wrapper">
       <nav>
         <h1>VM.</h1>
-        <div class="links-wrapper">
-          <RouterLink class="link" to="/">HOME</RouterLink>
-          <RouterLink class="link" to="/work">WORK</RouterLink>
-          <RouterLink class="link" to="/contact">CONTACT</RouterLink>
-          <!--           <span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-              <path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
-            </svg>
-          </span> -->
-        </div>
+        <span id="menu-wrapper">
+          <div class="links-wrapper">
+            <RouterLink class="link" to="/">HOME</RouterLink>
+            <RouterLink class="link" to="/work">WORK</RouterLink>
+            <RouterLink class="link" to="/contact">CONTACT</RouterLink>
+          </div>
+
+          <svg
+            id="menu"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+          >
+            <path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+          </svg>
+        </span>
       </nav>
     </div>
   </header>
@@ -35,7 +42,8 @@ header {
 }
 
 .wrapper nav,
-.links-wrapper {
+.links-wrapper,
+#menu-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,6 +55,11 @@ header {
   font-weight: 500;
   font-size: 2.5rem;
   border-inline-end: 0.2rem solid #99b898;
+  padding-inline-end: 0.5rem;
+}
+
+.links-wrapper {
+  transition: all 0.3s;
 }
 
 .link {
@@ -75,5 +88,22 @@ header {
 .link:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+#menu {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .links-wrapper {
+    display: inline-flex;
+    line-height: 0.5;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  #menu {
+    display: none;
+  }
 }
 </style>

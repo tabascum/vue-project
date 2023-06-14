@@ -6,9 +6,9 @@ let currentYear = document.getElementById('#currentYear')
   <footer>
     <div class="footer-wrapper">
       <p>
-        Conceived and Developed by Vasco Marques
-        <span id="currentYear">{{ (currentYear = new Date().getFullYear()) }}</span>
-        All rights reserved
+        Conceived and Developed by Vasco Marques &copy;
+        <span id="currentYear">{{ (currentYear = new Date().getFullYear()) }}</span> All rights
+        reserved
       </p>
     </div>
   </footer>
@@ -22,7 +22,7 @@ footer {
   justify-content: center;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   footer {
     display: flex;
     justify-content: center;
