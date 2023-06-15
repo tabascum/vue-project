@@ -25,7 +25,6 @@ typeEffect()
         </span>
         <p>Welcome to my world!</p>
       </article>
-      <article></article>
     </div>
   </section>
 </template>
@@ -33,27 +32,30 @@ typeEffect()
 <style scoped>
 @media (min-width: 1024px) {
   .home div {
-    padding-inline: 1rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     text-align: center;
     line-height: 0;
     min-height: 80vh;
+    font-size: 2rem;
   }
 
-  .home article:nth-child(n) {
-    font-size: 2.5rem;
-    text-shadow: 0.2rem 0.2rem 0.2rem #27363b;
+  .home article {
+    display: inherit;
+    flex-direction: column;
+    line-height: 0;
+    justify-content: center;
+    white-space: normal;
+    align-items: center;
+    text-align: center;
+    margin-inline: 1rem;
+    width: 50%;
   }
 }
 
-.home article {
-  display: inherit;
-  flex-direction: column;
-  line-height: 0;
-  align-items: center;
-  text-align: center;
+.home article:nth-child(n) {
+  text-shadow: 0.2rem 0.2rem 0.2rem #27363b;
 }
 
 .home figure {
@@ -70,8 +72,8 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
   color: #99b998;
+  line-break: auto;
 }
 
 @media (max-width: 1024px) {
@@ -82,8 +84,13 @@ h2 {
     text-align: center;
   }
 
+  .home article:nth-child(n) {
+    line-height: 1;
+    text-shadow: 0.2rem 0.2rem 0.2rem #27363b;
+  }
+
   .home figure {
-    padding-block: 1rem;
+    padding-block: 2rem;
   }
 }
 </style>

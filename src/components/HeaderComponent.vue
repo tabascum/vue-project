@@ -22,6 +22,11 @@ import { RouterLink } from 'vue-router'
             viewBox="0 0 24 24"
           >
             <path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+            <div class="links-wrapper">
+              <RouterLink class="link" to="/">HOME</RouterLink>
+              <RouterLink class="link" to="/work">WORK</RouterLink>
+              <RouterLink class="link" to="/contact">CONTACT</RouterLink>
+            </div>
           </svg>
         </span>
       </nav>
@@ -106,14 +111,14 @@ header {
 
 @media (max-width: 600px) {
   .links-wrapper {
-    display: inline-flex;
+    display: none;
     line-height: 0.5;
     flex-direction: column;
     align-items: flex-end;
   }
 
   #menu {
-    display: none;
+    display: inline;
   }
 }
 </style>

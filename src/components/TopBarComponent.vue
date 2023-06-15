@@ -1,7 +1,6 @@
 <script setup>
 import GithubIcon from './icons/GithubIcon.vue'
 import LinkedInIcon from './icons/LinkedInIcon.vue'
-import LightIcon from './icons/LightIcon.vue'
 import LangToggleIcon from './icons/LangToggleIcon.vue'
 
 let gitHubLink = 'https://github.com/tabascum'
@@ -12,7 +11,6 @@ let linkedInLink = 'https://www.linkedin.com/in/vascodmarques/'
   <section class="top-bar">
     <a :href="gitHubLink" target="_blank"><GithubIcon /></a>
     <a :href="linkedInLink" target="_blank"><LinkedInIcon /></a>
-    <a href=""><LightIcon /></a>
     <a href=""><LangToggleIcon /></a>
   </section>
 </template>
@@ -22,7 +20,8 @@ let linkedInLink = 'https://www.linkedin.com/in/vascodmarques/'
   display: flex;
   justify-content: end;
   align-items: start;
-  gap: 0.5rem;
+  gap: 1rem;
+  font-size: 1rem;
 }
 
 .top-bar a {

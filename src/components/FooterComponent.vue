@@ -20,10 +20,12 @@ footer {
   display: flex;
   align-items: end;
   justify-content: center;
+  font-size: 1vw;
 }
 
 @media (max-width: 1024px) {
   footer {
+    color: #99b998;
     display: flex;
     justify-content: center;
     text-align: center;
