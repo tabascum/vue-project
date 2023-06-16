@@ -3,25 +3,28 @@ import { RouterView } from 'vue-router'
 import TopBarComponent from './components/TopBarComponent.vue'
 import HeaderComponent from './components/HeaderComponent.vue'
 import FooterComponent from './components/FooterComponent.vue'
+import { ref } from 'vue'
 import LoadingScreenComponent from './components/LoadingScreenComponent.vue'
 
-const LoadingScreen = LoadingScreenComponent
-
-window.addEventListener('DOMContentLoaded', () => {
-  setTimeout(() => {
-    LoadingScreen
-  }, 10000)
-})
+const view = ref(true)
 </script>
 
 <template>
-  <TopBarComponent />
-  <main class="main">
-    <LoadingScreenComponent />
-    <HeaderComponent class="header" />
-    <RouterView />
-  </main>
-  <FooterComponent />
+  <Suspense>
+    <template #default>
+      <main class="main">
+        <TopBarComponent />
+        <main>
+          <HeaderComponent />
+          <RouterView />
+        </main>
+        <FooterComponent />
+      </main>
+    </template>
+    <template #fallback>
+      <component :is="view ? LoadingScreenComponent : ''"></component>
+    </template>
+  </Suspense>
 </template>
 
 <style scoped>

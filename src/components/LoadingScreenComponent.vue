@@ -1,25 +1,62 @@
-<script></script>
+<script setup>
+import { reactive } from 'vue'
 
-<template>
-  <audio autoplay>
-    <source src="../assets/sound/cinematic-trailer-music.mp3" type="audio/mp3" />
-  </audio>
-  <section>
-    <article class="intro">
-      <p>Not that long time ago... <br />In a country, not that far away...</p>
-    </article>
-    <div class="content-wrapper">
-      <article class="loading-content">
-        <h1>Vasco M.</h1>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident eligendi accusantium,
+const content = reactive({ info: {} })
+
+/* onMounted(async () => {
+  const data = await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({
+        intro1: 'Not that long time ago...',
+        intro2: 'In a country, not that far away...',
+        title: 'Vasco M.',
+        description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident eligendi accusantium,
           aut sunt eius quisquam? Eius explicabo tenetur quisquam voluptatem exercitationem
           praesentium unde tempore consequuntur non! Sapiente eaque aut, fuga placeat hic aliquam
           nostrum non ex. Dolore unde quibusdam eius error saepe autem, ratione expedita sit
           dolorem, hic distinctio minima? Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Voluptatibus dolor, dolorum assumenda maiores voluptas, natus fugiat ullam quae expedita
           ratione reiciendis blanditiis consectetur libero mollitia amet eius sint, quaerat
-          exercitationem.
+          exercitationem.`
+      })
+    }, 200)
+  })
+  content.info = data
+}) */
+
+async function getLoader() {
+  return await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({
+        intro: 'Not that long time ago...", "In a country, not that far away...',
+        title: 'Vasco M.',
+        description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident eligendi accusantium,
+          aut sunt eius quisquam? Eius explicabo tenetur quisquam voluptatem exercitationem
+          praesentium unde tempore consequuntur non! Sapiente eaque aut, fuga placeat hic aliquam
+          nostrum non ex. Dolore unde quibusdam eius error saepe autem, ratione expedita sit
+          dolorem, hic distinctio minima? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Voluptatibus dolor, dolorum assumenda maiores voluptas, natus fugiat ullam quae expedita
+          ratione reiciendis blanditiis consectetur libero mollitia amet eius sint, quaerat
+          exercitationem.`
+      })
+    }, 2000)
+  })
+}
+
+content.info = await getLoader()
+</script>
+
+<template>
+  <audio autoplay>
+    <source src="../assets/sound/cinematic-trailer-music.mp3" type="audio/mp3" />
+  </audio>
+  <section class="section">
+    <article class="intro">{{ content.info.intro1 }} <br />{{ content.info.intro2 }}</article>
+    <div class="content-wrapper">
+      <article class="loading-content">
+        <h1>{{ content.info.title }}</h1>
+        <p>
+          {{ content.info.description }}
         </p>
       </article>
     </div>
