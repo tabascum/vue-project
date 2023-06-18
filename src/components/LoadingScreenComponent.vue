@@ -1,14 +1,14 @@
 <script setup>
-import { reactive } from 'vue'
+import { onMounted, reactive } from 'vue'
 
 const content = reactive({ info: {} })
 
-/* onMounted(async () => {
+onMounted(async () => {
   const data = await new Promise((resolve) => {
     setTimeout(() => {
       resolve({
-        intro1: 'Not that long time ago...',
-        intro2: 'In a country, not that far away...',
+        firstLine: 'Not that long time ago...',
+        secondLine: 'In a country, not that far away...',
         title: 'Vasco M.',
         description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident eligendi accusantium,
           aut sunt eius quisquam? Eius explicabo tenetur quisquam voluptatem exercitationem
@@ -22,9 +22,9 @@ const content = reactive({ info: {} })
     }, 200)
   })
   content.info = data
-}) */
+})
 
-async function getLoader() {
+/* async function getLoader() {
   return await new Promise((resolve) => {
     setTimeout(() => {
       resolve({
@@ -43,15 +43,17 @@ async function getLoader() {
   })
 }
 
-content.info = await getLoader()
+content.info = await getLoader() */
 </script>
 
 <template>
-  <audio autoplay>
-    <source src="../assets/sound/cinematic-trailer-music.mp3" type="audio/mp3" />
-  </audio>
-  <section class="section">
-    <article class="intro">{{ content.info.intro1 }} <br />{{ content.info.intro2 }}</article>
+  <section class="section-wrapper">
+    <audio autoplay>
+      <source src="../assets/sound/cinematic-trailer-music.mp3" type="audio/mp3" />
+    </audio>
+    <article class="intro">
+      {{ content.info.firstLine }} <br />{{ content.info.secondLine }}
+    </article>
     <div class="content-wrapper">
       <article class="loading-content">
         <h1>{{ content.info.title }}</h1>
@@ -64,6 +66,12 @@ content.info = await getLoader()
 </template>
 
 <style scoped>
+.section-wrapper {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 2;
+}
 .intro {
   position: absolute;
   top: 30%;
