@@ -16,16 +16,16 @@ let currentYear = document.getElementById('#currentYear')
 
 <style scoped>
 footer {
-  color: #99b998;
+  line-height: 0;
+  color: #489f9c;
   display: flex;
   align-items: end;
   justify-content: center;
-  font-size: 1vw;
+  font-size: 1.2vw;
 }
 
 @media (max-width: 1024px) {
   footer {
-    color: #99b998;
     display: flex;
     justify-content: center;
     text-align: center;

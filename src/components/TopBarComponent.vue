@@ -19,17 +19,16 @@ let linkedInLink = 'https://www.linkedin.com/in/vascodmarques/'
 .top-bar {
   display: flex;
   justify-content: end;
-  align-items: start;
-  gap: 1rem;
   font-size: 1rem;
+  gap: 1rem;
 }
 
 .top-bar a {
-  color: #fdceaa;
+  color: #66fcf1;
   transition: all 0.8s;
 }
 
 .top-bar a:hover {
-  color: #27363b;
+  color: #489f9c;
 }
 </style>

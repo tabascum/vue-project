@@ -10,28 +10,28 @@ const typeEffect = () => {
   }
 }
 typeEffect()
+
+/*  */
 </script>
 
 <template>
   <section class="home">
-    <div>
-      <figure>
-        <img src="../assets/img/programmer-man.png" alt="" />
-      </figure>
-      <article>
-        <h1>Vasco Marques</h1>
-        <span>
-          <h2 class="typingEffect">{{ typeValue }}</h2>
-        </span>
-        <p>Welcome to my world!</p>
-      </article>
-    </div>
+    <!--     <figure>
+      <img src="../assets/img/programmer-man.png" alt="" />
+    </figure> -->
+    <article class="content-wrapper">
+      <h1>Vasco Marques</h1>
+      <span>
+        <h2 class="typingEffect">{{ typeValue }}</h2>
+      </span>
+      <p>Welcome to my world!</p>
+    </article>
   </section>
 </template>
 
 <style scoped>
 @media (min-width: 1024px) {
-  .home div {
+  .home {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -41,21 +41,16 @@ typeEffect()
     font-size: 2rem;
   }
 
-  .home article {
+  .content-wrapper {
     display: inherit;
     flex-direction: column;
-    line-height: 0;
     justify-content: center;
-    white-space: normal;
+
     align-items: center;
     text-align: center;
     margin-inline: 1rem;
     width: 50%;
   }
-}
-
-.home article:nth-child(n) {
-  text-shadow: 0.2rem 0.2rem 0.2rem #27363b;
 }
 
 .home figure {
@@ -67,13 +62,8 @@ typeEffect()
   width: 70%;
 }
 
-h1 {
-  font-family: 'Bodoni Moda', serif;
-}
-
-h2 {
-  color: #99b998;
-  line-break: auto;
+.content-wrapper:nth-child(n) {
+  text-shadow: 0.2rem 0.2rem 0.2rem #27363b;
 }
 
 @media (max-width: 1024px) {
@@ -83,14 +73,13 @@ h2 {
     align-items: center;
     text-align: center;
   }
-
-  .home article:nth-child(n) {
-    line-height: 1;
-    text-shadow: 0.2rem 0.2rem 0.2rem #27363b;
-  }
-
   .home figure {
     padding-block: 2rem;
+  }
+
+  .content-wrapper:nth-child(n) {
+    line-height: 1;
+    text-shadow: 0.2rem 0.2rem 0.2rem #27363b;
   }
 }
 </style>
