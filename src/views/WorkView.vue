@@ -46,22 +46,24 @@ import GithubIcon from '../components/icons/GithubIcon.vue'
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  text-align: end;
 }
 
-.cards figure {
+.cards figure img {
   cursor: pointer;
   transition: all 0.5s;
   text-align: end;
-  transform: perspective(1000px) rotateY(-20deg);
+  transform: perspective(1000px) rotateY(-25deg);
 }
 
 .cards figure img:hover {
   cursor: pointer;
+  box-shadow: 0.5rem 0.5rem 0.5rem #489f9c;
+  transform: none;
 }
 
 .cards figure img {
   width: 100%;
-  box-shadow: 0.5rem 0.5rem 0.5rem #303844;
 }
 
 @media (max-width: 1024px) {
@@ -79,6 +81,13 @@ import GithubIcon from '../components/icons/GithubIcon.vue'
   .cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 </style>

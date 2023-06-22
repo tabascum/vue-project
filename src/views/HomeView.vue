@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import SideStackComponent from '../components/SideStackComponent.vue'
 const code = '< FRONT END DEVELOPER />'
 const typeValue = ref('')
 
@@ -19,6 +20,7 @@ typeEffect()
     <!--     <figure>
       <img src="../assets/img/programmer-man.png" alt="" />
     </figure> -->
+    <SideStackComponent />
     <article class="content-wrapper">
       <h1>Vasco Marques</h1>
       <span>
