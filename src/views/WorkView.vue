@@ -8,28 +8,33 @@ import GithubIcon from '../components/icons/GithubIcon.vue'
       <h1>Projects</h1>
       <article class="cards">
         <figure>
-          <img class="card" src="../assets/img/coding.jpg" alt="" />
-          <figcaption>A small text</figcaption>
+          <img class="card" src="../assets/img/barber-page.png" alt="" />
+          <figcaption>Barber Landing Page <GithubIcon /></figcaption>
         </figure>
 
         <figure>
-          <img class="card" src="../assets/img/coding.jpg" alt="" />
-          <figcaption>A small text</figcaption>
+          <img class="card" src="../assets/img/construction-page.png" alt="" />
+          <figcaption>Construction Web Page <GithubIcon /></figcaption>
         </figure>
 
         <figure>
-          <img class="card" src="../assets/img/coding.jpg" alt="" />
-          <figcaption>A small text <GithubIcon /></figcaption>
+          <img class="card" src="../assets/img/api-consumption-page.png" alt="" />
+          <figcaption>Weather App<GithubIcon /></figcaption>
         </figure>
 
         <figure>
-          <img class="card" src="../assets/img/coding.jpg" alt="" />
-          <figcaption>A small text</figcaption>
+          <img class="card" src="../assets/img/vue-notes-app.png" alt="" />
+          <figcaption>Notes App<GithubIcon /></figcaption>
         </figure>
 
         <figure>
-          <img class="card" src="../assets/img/coding.jpg" alt="" />
-          <figcaption>A small text</figcaption>
+          <img class="card" src="../assets/img/restaurant-page.png" alt="" />
+          <figcaption>Restaurant Page <GithubIcon /></figcaption>
+        </figure>
+
+        <figure>
+          <img class="card" src="../assets/img/contact-form.png" alt="" />
+          <figcaption>Page with contact form <GithubIcon /></figcaption>
         </figure>
       </article>
     </section>
@@ -49,21 +54,31 @@ import GithubIcon from '../components/icons/GithubIcon.vue'
   text-align: end;
 }
 
-.cards figure img {
+.cards figure {
   cursor: pointer;
   transition: all 0.5s;
   text-align: end;
   transform: perspective(1000px) rotateY(-25deg);
 }
 
-.cards figure img:hover {
+.cards figure:hover {
   cursor: pointer;
-  box-shadow: 0.5rem 0.5rem 0.5rem #489f9c;
   transform: none;
 }
 
 .cards figure img {
   width: 100%;
+}
+
+.cards figure img:hover {
+  box-shadow: 0.3rem 0.3rem 0.8rem #489f9c;
+}
+
+figcaption {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 @media (max-width: 1024px) {
